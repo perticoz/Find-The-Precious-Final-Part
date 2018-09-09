@@ -1,0 +1,426 @@
+* ----------------------------------------*/
+/* basic setup*/
+/*-----------------------------------------*/
+
+
+body {
+    background: url(img/bg_dark.png);
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+h3, h2, h1, h4, h5 {
+    font-family: 'policetitre';
+}
+
+p {
+    font-family: 'policetexte';
+    font-size : 1.4rem;
+}
+
+.symbole {
+    
+    font-family: 'symboles';
+    color: #eb8024;
+    vertical-align: super;
+    font-size: 1.5rem; 
+}
+
+
+/* ----------------------------------------*/
+/* Fonts */
+/*-----------------------------------------*/
+@font-face
+{
+    font-family: 'policetitre';
+    src: url("fonts/Police titres/anirb___.ttf");
+}
+
+@font-face
+{
+    font-family: 'policetexte';
+    src: url("fonts/Police texte/partybusiness.ttf");
+}
+
+@font-face
+{
+    font-family: 'symboles';
+    src: url("fonts/symboles/tnganbi.ttf");
+}
+
+/* ----------------------------------------*/
+/* NAVBAR         */
+/*-----------------------------------------*/
+
+.navbar  {
+    font-family: 'policetitre';
+    background-color: #eb8024;
+    font-size: 0.8rem;
+    color:white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 0.8rem;
+    color: white;    
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.nav-link:active {
+    color: white;
+    text-decoration: none;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 2px;
+}
+
+
+/* ----------------------------------------*/
+/* Carousel:                   ;           */
+/*-----------------------------------------*/
+
+
+
+.carousel, 
+.carousel-inner, 
+.carousel-inner .item {
+    height: 100%;
+}
+
+.carousel-caption {
+    top: 30%;
+    bottom: auto;
+}
+
+/* ----------------------------------------*/
+/* Section wanted                          */
+/*-----------------------------------------*/
+
+.wanted {
+    
+    background: url(img/bg_light.png);
+    padding-top: 3%
+}
+.textewanted {
+    
+    font-size: 1rem;
+}
+
+.btnwanted {
+
+    font-family: 'policetitre';
+    color:dimgrey;
+    font-size: 0.9rem;
+}
+
+.btnwanted:hover::after {
+    display: block;
+    padding-bottom: 3px;
+    content: "";
+    width: 140px;
+    height: 2px;
+    background-color: #eb8024;
+    margin: 0 auto;
+    text-decoration: none;    
+}
+
+
+.symbolecache {   
+    display: none;
+}
+
+.btnwanted:hover .symbolecache { 
+    text-decoration: none;
+    font-family: 'symboles';
+    color : darkorange;
+    display: inline-block;
+    font-size: 1.1rem; 
+}
+
+.btnwanted:hover {
+    text-decoration: none;
+    color:dimgray;
+}
+
+
+
+/* ----------------------------------------*/
+/* Section Wanted positionnement & style photos           */
+/*-----------------------------------------*/
+
+
+.bg-d {
+    background: url(img/bg_dark.png);
+    width: 246px;
+    border: 3px solid black;
+}
+
+.wt {
+    color: #f8f9fa;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+.wanted figure{
+    position: relative;
+}
+
+.photo-wanted {
+    display: flex;
+    justify-content: center;
+}
+
+
+.photo-wanted img {
+    width: 240px;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.5s;
+}
+
+.photo-wanted-dead img {
+    width: 240px;
+    height: auto;
+    opacity: 0.3;
+    transition: opacity 0.5s;
+}
+
+/* ----------------------------------------*/
+/* Positionement & style nom               */
+/*-----------------------------------------*/
+
+.titre-wanted {
+    font-family: 'policetexte';
+    position: absolute;
+    top: 35%;
+    left: 0; 
+    right: 0; 
+}
+
+.wanted h2 {
+    text-align: center;
+    color: #f7f3f3;
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+}
+
+.wanteddead {
+    text-decoration: line-through;
+    text-decoration-color: #eb8024
+}
+ 
+/* ----------------------------------------*/
+/* Section Wanted Positionement et style recompense       */
+/*-----------------------------------------*/
+
+.reward-wanted {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    right: 0;
+    padding: 4% 0;
+    margin: 5% 5%;
+    background-color: #f7f3f3;
+    opacity: 0.8;
+    color: #292626;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+    line-height: 0.9em;
+    transition : opacity 0.2s;  
+}
+
+.reward-wanted-dead {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    right: 0;
+    padding: 4% 0;
+    margin: 5% 5%;
+    opacity: 1;
+    color: #eb8024;
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+    transition : opacity 0.2s; 
+}
+
+.reward-wanted p {
+    margin: 0;
+    padding: 4% 0;
+}
+
+.color-gold {
+    color: #eb8024;
+}
+
+/* ----------------------------------------*/
+/* Section wanted Effet Hover .                           */
+/*-----------------------------------------*/
+
+.photo-wanted-block:hover img{
+    opacity: 1;
+}
+
+.photo-wanted-block:hover .reward-wanted,
+.photo-wanted-block:hover .reward-wanted-dead
+{
+    opacity: 0;
+}
+
+.photo-wanted-block:hover .titre-wanted {
+   top : 60%;
+    text-decoration: none;
+}
+
+.photo-wanted-block:hover .wanteddead {
+   top : 60%; 
+}
+
+.photo-wanted-block:hover h2 {
+    font-size: 2rem;
+}
+
+/* ----------------------------------------*/
+/* Section captured                      */
+/*-----------------------------------------*/
+
+.captured {
+    background: url(img/bg_dark.png);
+
+}
+
+.texte-standard {
+    font-size: 1.2rem
+}
+
+.trait-haut {
+    width: 100%;
+    height: 4px;
+    background-color: #eb8024;
+    margin-bottom: 3%;
+}
+
+.trait-bas {
+    width: 100%;
+    height: 4px;
+    background-color: #eb8024;
+    margin-top: 3%;
+}
+
+.btn-captured {
+    font-family: 'policetitre';
+    color: #eb8024;
+    border-radius: 0;
+    height: 3rem;
+    width: 12rem;
+    background-color: white;
+}
+
+/* ----------------------------------------*/
+/* Section Hunters                     */
+/*-----------------------------------------*/
+
+.hunters {
+    background: url(img/bg_light.png);
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.titre-hunters {
+    font-family: 'policetexte';
+    color:#eb8024;
+    font-size: 2.5rem;
+}
+
+.rank-hunters {
+    font-size: 1.3rem;
+}
+
+/* ----------------------------------------*/
+/* Section Ring                   */
+/*-----------------------------------------*/
+
+.ring {
+    background: url(img/bg_dark.png);
+}
+
+.card {
+    padding: 0;
+}
+
+.card-header {
+    font-family: 'policetitre';
+    background-color:#eb8024;
+    font-size :1rem;
+    color : #f8f9fa;
+}
+
+.table {
+    font-family: 'policetitre';
+    font-size: 0.8rem;
+}
+
+
+/* ----------------------------------------*/
+/* Section join                  */
+/*-----------------------------------------*/
+
+    
+.join {
+    background: url(img/bg_light.png);
+    padding-top: 5%;
+    padding-bottom: 5%;
+} 
+
+.btn-join {
+    font-family: 'policetitre';
+    color: #eb8024;
+    border-radius: 0;
+    height: 3rem;
+    width: 21rem;
+    background-color: black  
+}
+
+.texte-btn {
+    color: #eb8024;
+}
+
+/* ----------------------------------------*/
+/* Section contact                */
+/*-----------------------------------------*/
+
+.contact {
+    background: url(img/bg_dark.png);
+    padding-bottom: 5%;
+}
+
+.p-contact {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* ----------------------------------------*/
+/* footer: ;                */
+/*-----------------------------------------*/
+
+.footer {
+    background-color: #eb8024;
+    padding-top: 2%;
+    color: #f8f9fa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
